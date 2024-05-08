@@ -5,6 +5,9 @@ WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
+# Set environment variable for development
+ENV ASPNETCORE_ENVIRONMENT=Development
+
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY ["LogAnalyzerApi/LogAnalyzerApi.csproj", "LogAnalyzerApi/"]
