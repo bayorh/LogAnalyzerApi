@@ -8,7 +8,7 @@ ENV ASPNETCORE_ENVIRONMENT=Development
 
 
 # Copy the project file and restore dependencies
-COPY *.csproj .
+COPY LogAnalyzerApi.csproj .
 RUN dotnet restore
 
 # Copy the remaining source code
