@@ -1,5 +1,7 @@
 using LogAnalyzerApi.Implementations;
 using LogAnalyzerApi.Interefaces;
+using Microsoft.Extensions.Options;
+using Microsoft.OpenApi.Models;
 
 namespace LogAnalyzerApi
 {
@@ -12,6 +14,7 @@ namespace LogAnalyzerApi
             // Add services to the container.
 
             builder.Services.AddControllers();
+            
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
@@ -27,6 +30,7 @@ namespace LogAnalyzerApi
             }
 
             app.UseHttpsRedirection();
+            app.UseCors();
 
             app.UseAuthorization();
 
